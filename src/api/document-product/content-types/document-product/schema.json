@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "document_products",
+  "info": {
+    "singularName": "document-product",
+    "pluralName": "document-products",
+    "displayName": "DocumentProduct",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "value": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    },
+    "subTotal": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    },
+    "discount": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    },
+    "amount": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "tax": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "taxSubTotal": {
+      "type": "decimal",
+      "default": 0,
+      "required": true
+    },
+    "delivered": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "delivery": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::delivery.delivery",
+      "inversedBy": "document_products"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "document_products"
+    },
+    "document": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::document.document",
+      "inversedBy": "document_products"
+    }
+  }
+}

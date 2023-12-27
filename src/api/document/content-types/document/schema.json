@@ -1,0 +1,135 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documents",
+  "info": {
+    "singularName": "document",
+    "pluralName": "documents",
+    "displayName": "Document",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "number": {
+      "type": "biginteger",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "prefix": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "phase": {
+      "type": "integer",
+      "required": true
+    },
+    "files": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "comment": {
+      "type": "text"
+    },
+    "reference": {
+      "type": "string"
+    },
+    "note": {
+      "type": "string"
+    },
+    "client": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::client.client",
+      "inversedBy": "documents"
+    },
+    "establishment": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::establishment.establishment",
+      "inversedBy": "documents"
+    },
+    "document_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::document-product.document-product",
+      "mappedBy": "document"
+    },
+    "payments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::payment.payment",
+      "mappedBy": "document"
+    },
+    "support_tickets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::support-ticket.support-ticket",
+      "mappedBy": "document"
+    },
+    "tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::task.task",
+      "mappedBy": "document"
+    },
+    "invoiced": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "decisionMaker": {
+      "type": "string"
+    },
+    "fsID": {
+      "type": "string"
+    },
+    "docAddress": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::address.address",
+      "inversedBy": "documents"
+    },
+    "fromDocID": {
+      "type": "biginteger"
+    },
+    "toDocID": {
+      "type": "biginteger"
+    },
+    "managerNote": {
+      "type": "text"
+    },
+    "delAddress": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::address.address",
+      "inversedBy": "documentsDel"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-info.user-info",
+      "inversedBy": "documents"
+    }
+  }
+}

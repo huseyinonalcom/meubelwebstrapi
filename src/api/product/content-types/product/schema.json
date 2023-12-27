@@ -1,0 +1,147 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "productLine": {
+      "type": "string"
+    },
+    "supplierCode": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "tax": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "width": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "depth": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "minStock": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "minOrderAmount": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "height": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "color": {
+      "type": "string"
+    },
+    "material": {
+      "type": "string"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "supplier": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::supplier.supplier",
+      "inversedBy": "products"
+    },
+    "document_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::document-product.document-product",
+      "mappedBy": "product"
+    },
+    "discountRange": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "active": {
+      "type": "boolean",
+      "default": true,
+      "required": false
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "shelves": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shelf.shelf",
+      "mappedBy": "product"
+    },
+    "supplier_order_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::supplier-order-product.supplier-order-product",
+      "mappedBy": "product"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "priceBeforeDiscount": {
+      "type": "decimal"
+    },
+    "internalCode": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "product_extra": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-extra.product-extra",
+      "mappedBy": "product"
+    },
+    "promos": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::promo.promo",
+      "mappedBy": "products"
+    }
+  }
+}

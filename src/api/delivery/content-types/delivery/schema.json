@@ -1,0 +1,105 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deliveries",
+  "info": {
+    "singularName": "delivery",
+    "pluralName": "deliveries",
+    "displayName": "Delivery",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "timeStart": {
+      "type": "time",
+      "required": true
+    },
+    "timeEnd": {
+      "type": "time"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "note": {
+      "type": "string"
+    },
+    "files": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "deliveryTaker": {
+      "type": "string"
+    },
+    "deliveryTakerPhone": {
+      "type": "string"
+    },
+    "lift": {
+      "type": "boolean",
+      "default": false
+    },
+    "liftPhone": {
+      "type": "string"
+    },
+    "establishment": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::establishment.establishment",
+      "inversedBy": "deliveries"
+    },
+    "incoming": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "document_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::document-product.document-product",
+      "mappedBy": "delivery"
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "deliveryAddress": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::address.address",
+      "inversedBy": "deliveries"
+    },
+    "supplier_order_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::supplier-order-product.supplier-order-product",
+      "mappedBy": "delivery"
+    },
+    "issuingUser": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-info.user-info",
+      "inversedBy": "issuedDeliveries"
+    },
+    "receivingUser": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-info.user-info",
+      "inversedBy": "receivedDeliveries"
+    }
+  }
+}

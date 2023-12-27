@@ -1,0 +1,1688 @@
+  271  yarn
+  272  yarn dev
+  273  yarn develop
+  274  ls
+  275  nano package.json 
+  276  ls config/
+  277  cd config/
+  278  ls
+  279  nano server.js 
+  280  yarn develop
+  281  yarn build
+  282  yarn develop
+  283  ls
+  284  cd adm
+  285  nano admin.js 
+  286  nano api.js 
+  287  nano middlewares.js 
+  288  nano plugins.js 
+  289  nano server.js 
+  290  ls
+  291  cd ..
+  292  ks
+  293  ls
+  294  nano nodebat.bat 
+  295  rm nodebat.bat 
+  296  ls build/
+  297  l
+  298  ls
+  299  nano yarn.lock 
+  300  ls
+  301  ls src/
+  302  nano src/
+  303  nano src/index.js 
+  304  ls src/
+  305  ls
+  306  nano package-lock.json 
+  307  ls
+  308  nano package
+  309  nano package.json 
+  310  ls
+  311  ls node_modules/
+  312  ls
+  313  ls database/
+  314  ls database/migrations/
+  315  ls public/
+  316  yarn
+  317  rm package-lock.json 
+  318  yarn
+  319  yarn build
+  320  ls
+  321  ls -fl
+  322  nano .env
+  323  ls .tmp/
+  324  yarn develop
+  325  nano /etc/nginx/nginx.conf
+  326  yarn develop
+  327  certbot
+  328  nano /etc/nginx/nginx.conf
+  329  yarn develop
+  330  ls /
+  331  ls /home/
+  332  ls
+  333  mkdir /home/receivedfiles
+  334  ls
+  335  ls /home/receivedfiles/
+  336  zip
+  337  7z
+  338  7zip
+  339  apt install 7zip
+  340  apt install 7z
+  341  apt install unzip
+  342  cd /home/receivedfiles/
+  343  ls
+  344  unzip strapi.zip 
+  345  ls
+  346  ls my-project/
+  347  cp -r my-project/ /root/mwstr/mwstrapi
+  348  ls /root/mwstr/mwstrapi/
+  349  cp -r my-project/ /root/kwstr/kwstrapi
+  350  ls
+  351  ls -fl
+  352  nginx
+  353  ls
+  354  ls /etc/
+  355  cd /etc/nginx/
+  356  ls
+  357  nano nginx.conf 
+  358  rm -rf /root/ochnext
+  359  ls /root/
+  360  ls
+  361  ls /etc/
+  362  ls
+  363  nano nginx.conf 
+  364  certbot
+  365  apt-get install python3-certbot-nginx
+  366  certbot
+  367  nano nginx.conf 
+  368  ls
+  369  cd /root/
+  370  ls
+  371  kwnext/
+  372  cd kw
+  373  cd kwnext/
+  374  ls
+  375  cd keukenwebnextdocpage/
+  376  ls
+  377  nano next.config.js 
+  378  nano src/
+  379  cd src/
+  380  ls
+  381  cd pages/
+  382  ls
+  383  nano _app.js 
+  384  cd ..
+  385  ks
+  386  ls
+  387  ls -fl
+  388  nano jsconfig.json 
+  389  ls public/
+  390  nano next.config.js 
+  391  ls
+  392  ls -fl
+  393  ls
+  394  nano package.json 
+  395  nano package-lock.json 
+  396  ls
+  397  cd src/
+  398  ls
+  399  ls -fl
+  400  cd ..
+  401  ls -fl
+  402  ls
+  403  nano .env.local
+  404  ls
+  405  ls src/
+  406  cd src/
+  407  ls
+  408  cd pages/
+  409  cd ..
+  410  npm i
+  411  yarn
+  412  npm i
+  413  ls
+  414  ls -fl
+  415  npm run build
+  416  np run dev
+  417  npm run dev
+  418  ls
+  419  nano next.config.js 
+  420  nano package
+  421  nano package.json 
+  422  ls -fl
+  423  cd ..
+  424  ls
+  425  cd ..
+  426  ls
+  427  cd kwstr/
+  428  ls
+  429  cd kwstrapi/
+  430  ls
+  431  yarn
+  432  npm install -g nvm
+  433  npm remove nvm
+  434  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+  435  nvm
+  436  bash
+  437  ls
+  438  cd kwstr/
+  439  cd kwstrapi/
+  440  ls
+  441  yarn develop
+  442  ls
+  443  ls -fl
+  444  nano .env
+  445  ls
+  446  nano .env.example 
+  447  yarn build
+  448  yarn develop
+  449  ls
+  450  ufw status
+  451  ufw allow 8080/tcp
+  452  ufw allow 443/tcp
+  453  yarn develop
+  454  pm2 start yarn --interpreter bash --name api -- develop
+  455  npm i -g pm2
+  456  pm2 start yarn --interpreter bash --name api -- develop
+  457  pm2 status
+  458  pm2 kill
+  459  pm2 start yarn --interpreter bash --name kwstrapi -- develop
+  460  pm2 kill
+  461  pm2 start yarn --name kwstrapi -- develop
+  462  ls
+  463  ls ..
+  464  cd ../..
+  465  ls
+  466  cd mwstr/
+  467  ls
+  468  cd ms
+  469  cd mwstrapi/
+  470  ls
+  471  ls -fl
+  472  nano /etc/nginx/nginx.conf 
+  473  ls -fl
+  474  nano .env
+  475  ls
+  476  rm nodebat.bat 
+  477  ls
+  478  ls config/
+  479  nano ser
+  480  nano server.js
+  481  cd config/
+  482  nano server.js 
+  483  cd ..
+  484  yarn build
+  485  yarn strapi build
+  486  chmod +x ./
+  487  yarn build
+  488  cd ..
+  489  chmod +x mwstrapi
+  490  chmod +x mwstrapi/
+  491  cd mwstrapi/
+  492  yarn build
+  493  pm2 list
+  494  yarn
+  495  yarn build
+  496  pm2 start yarn --name mwstrapi -- develop
+  497  pm2 list
+  498  ls
+  499  pm2 status
+  500  nano /etc/nginx/nginx.conf
+  501  ls
+  502  cd mwstr/
+  503  ls
+  504  cd mwstrapi/
+  505  ls
+  506  ls -flr
+  507  ls -r
+  508  ls -R
+  509  ls -Rfl
+  510  ls
+  511  l
+  512  l node_modules/
+  513  ls -fl
+  514  nano .env
+  515  ls
+  516  nano package.json 
+  517  cd src/
+  518  ls
+  519  nano index.js 
+  520  cd admin/
+  521  ls
+  522  nano app.example.js 
+  523  cd ..
+  524  ls
+  525  cd api/
+  526  ls
+  527  cd betaling/
+  528  ls
+  529  cd routes/
+  530  ls
+  531  nano betaling.js 
+  532  ls
+  533  cd ..
+  534  ls
+  535  cd documentation/
+  536  ls
+  537  cd 1.0.0/
+  538  ls
+  539  nano betaling.json 
+  540  cd ..
+  541  ls
+  542  cd ..
+  543  ls
+  544  cd cont
+  545  cd controllers/
+  546  ls
+  547  nano betaling.js 
+  548  d ..
+  549  cd ..
+  550  ls
+  551  cd ..
+  552  cd mwnext/
+  553  ls
+  554  cd meubelwebnextdocpage/
+  555  ls
+  556  cd src/
+  557  ls
+  558  cd pages/
+  559  ls
+  560  nano pincode.js 
+  561  dpkg -l locales
+  562  apt install locales
+  563  locales
+  564  locale
+  565  ls
+  566  ls -fl
+  567  ls .pm2/
+  568  pm2 status
+  569  pm2 lost
+  570  pm2 list
+  571  4
+  572  pm2 list
+  573  ls
+  574  ls kwnext/
+  575  ls
+  576  ls kwnext/
+  577  ls kwstr/
+  578  ls kwstr/µ
+  579  ls kwstr/
+  580  ls kwstr/kwstrapi/
+  581  cd kwstr/kwstrapi/
+  582  ls
+  583  ls kwnext/
+  584  exit
+  585  ls
+  586  pm2 l
+  587  journalctl -x
+  588  journalctl -h
+  589  journalctl -x -S 2023/5/22
+  590  journalctl -x -S 2023522
+  591  journalctl -x -S 2023.05.22
+  592  journalctl -x -S 2023/05/22
+  593  journalctl -x -S 22/05/2023
+  594  journalctl -x -S
+  595  journalctl -h
+  596  journalctl -x -S today
+  597  ls
+  598  cd kwstr/
+  599  ls
+  600  cd kwstrapi/
+  601  ls
+  602  cat yarn-error.log 
+  603  ls
+  604  ls -fl
+  605  nano .env
+  606  pm2 l
+  607  cat kwstrapi
+  608  pm2 h
+  609  pm2 -h
+  610  pm2 inspect kwstrapi
+  611  pm2 l
+  612  pm2 inspect
+  613  pm2 inspect 1
+  614  pm2 inspect kwstrapi
+  615  pm2 inspect 46075
+  616  pm2 -h
+  617  pm2 logs
+  618  pm2 logs kwstrapi
+  619  ls
+  620  ls mwnext/
+  621  cd mwnext/meubelwebnextdocpage/
+  622  ls
+  623  ls -fl
+  624  cd ../..
+  625  cd kwnext/keukenwebnextdocpage/
+  626  ls
+  627  ls -fl
+  628  nano .env.local 
+  629  pm2 list
+  630  npm run build
+  631  npm run start
+  632  npm run build
+  633  ps aux
+  634  pm2 list
+  635  npm update
+  636  npm run build -- --clear-cache
+  637  npm run build --clear-cache
+  638  journalctl -xe
+  639  ls
+  640  npm run
+  641  pm run dev
+  642  npm run dev
+  643  ls
+  644  nano next.config.js 
+  645  nano jsconfig.json 
+  646  nano package
+  647  nano package.json 
+  648  npm run build
+  649  rm package-lock.json 
+  650  ls -fl
+  651  npm install
+  652  ls
+  653  ls src/
+  654  ls node_modules/
+  655  npm i
+  656  npm run build
+  657  ls -fl
+  658  ls .next/
+  659  rm -rf .next/
+  660  ls
+  661  rm package-lock.json 
+  662  npm i
+  663  npm run build
+  664  ls -fl
+  665  rm -rf node_modules/
+  666  rm -rf .next/
+  667  rm package-lock.json 
+  668  ls -fl
+  669  npm i
+  670  npm run build
+  671  npm run start
+  672  pm2 start npm --name "kwnext" -- start
+  673  ls
+  674  ls -fl
+  675  nano .env.local 
+  676  cd ..
+  677  cd mwnext/meubelwebnextdocpage/
+  678  ls -fl
+  679  nano .env.local
+  680  cd ../../kwnext/keukenwebnextdocpage/
+  681  nano .env.local 
+  682  cd ../../kwnext/keukenwebnextdocpage/
+  683  nano ../../mwnext/meubelwebnextdocpage/.env.local 
+  684  nano .env.local 
+  685  nano ../../mwnext/meubelwebnextdocpage/.env.local 
+  686  nano .env.local 
+  687  nano ../../mwnext/meubelwebnextdocpage/.env.local 
+  688  cd ../../mwnext/meubelwebnextdocpage/
+  689  ls
+  690  ls -fl
+  691  npm i
+  692  npm run duilb
+  693  npm run build
+  694  nano package.json 
+  695  nano /etc/nginx/nginx.conf 
+  696  npm run start
+  697  pm2 start npm --name "mwnext" -- start
+  698  ls
+  699  cd ..
+  700  ls
+  701  ls -fl
+  702  cd
+  703  cd ..
+  704  ls
+  705  ls home/
+  706  rm -rf home/infosoftlife
+  707  rm -rf home/infosoftlifebe/
+  708  ls home/
+  709  ls home/receivedfiles/
+  710  ls
+  711  ls root/
+  712  ls -flr
+  713  cd root/mwnext/
+  714  ls -fl -r
+  715  ls -fl -R
+  716  ls
+  717  cd meubelwebnextdocpage/
+  718  ls -fl
+  719  ls -f
+  720  ls .git
+  721  rm -rf .git
+  722  pm2 list
+  723  pm2 kill mwstrapi
+  724  pm2 list
+  725  pm2 stop mwstrapi
+  726  pm2 list
+  727  ls
+  728  ls -f
+  729  rm -rf node_modules
+  730  rm -rf .next
+  731  rm .gitignore 
+  732  rm -rf package-lock.json 
+  733  ls -f
+  734  cd ..
+  735  ls
+  736  cd meubelwebnextdocpage/
+  737  npm i
+  738  npm run build
+  739  pm2 start mwnext
+  740  pm2 start mwstrapi
+  741  pm2 stop kwnext
+  742  cd ../../kwnext/keukenwebnextdocpage/
+  743  ls
+  744  rm -rf node_modules/
+  745  rm -rf .next/
+  746  rm -rf package-lock.json 
+  747  ls -fl
+  748  rm -rf .git
+  749  rm -rf .gitignore 
+  750  ls -fl
+  751  rm README.md 
+  752  ;s
+  753  ls -fl
+  754  npm i
+  755  npm run build
+  756  pm2 start kwnext
+  757  ls
+  758  cp .env.local ../.env.local
+  759  ls
+  760  ls ..
+  761  ls -fl ..
+  762  cp ../../mwnext/meubelwebnextdocpage/.env.local ../../mwnext/.env.local
+  763  cd ..
+  764  cd kwstr/
+  765  ls
+  766  cd kwstrapi/
+  767  ls
+  768  ls -fl
+  769  cp .env ../.env
+  770  cp ../../mwstr/mwstrapi/.env ../../mwstr/.env
+  771  ufw status
+  772  ufw status numbered
+  773  ufw remove 5
+  774  ufw delete 5
+  775  ufw status numbered
+  776  ufw delete 10
+  777  ufw status numbered
+  778  ufw delete 8
+  779  ufw status numbered
+  780  ufw delete 3
+  781  ufw status numbered 
+  782  ls
+  783  nano .env
+  784  cd ..
+  785  cd kwnext/
+  786  nano .env.local 
+  787  nano keukenwebnextdocpage/.env.local 
+  788  cd ..
+  789  cd mwnext/
+  790  nano .env.local 
+  791  nano meubelwebnextdocpage/.env.local 
+  792  cd ..
+  793  cd kwnext/
+  794  nano .env.local 
+  795  ls
+  796  cd kwstr/
+  797  cd kwstrapi/
+  798  ls
+  799  cd config/
+  800  ls
+  801  nano plugins.js 
+  802  pm2 -h
+  803  pm2 kill
+  804  cd ..
+  805  yarn build
+  806  pm2 start yarn --name kwstrapi -- develop
+  807  cd ../../mwstr/mwstrapi/
+  808  cd config/
+  809  nano plugins.js 
+  810  pm2 start yarn --name mwstrapi -- develop
+  811  cd ../../kwnext
+  812  cd ..
+  813  cd kwnext/
+  814  cd keukenwebnextdocpage/
+  815  pm2 start npm --name "kwnext" -- start
+  816  pm2 start npm --name "mwnext" -- start
+  817  cd ..
+  818  cd..
+  819  ls
+  820  cd kwstr/
+  821  cd kwstrapi/
+  822  ls
+  823  cd config/
+  824  ls
+  825  nano admin.js 
+  826  nano api.js
+  827  nano database.js
+  828  nano middlewares.js 
+  829  nano server.js 
+  830  cd ..
+  831  ls
+  832  cd database/
+  833  ls
+  834  cd ..
+  835  ls
+  836  nano package.json 
+  837  xit
+  838  exit
+  839  ls
+  840  ls kwstr/
+  841  cd kwstr/kwstrapi/
+  842  ;s
+  843  ls
+  844  ls pi
+  845  ls public/
+  846  ls public/uploads/
+  847  ls config/
+  848  ls src/
+  849  ls src/extensions/
+  850  ls src/extensions/documentation/
+  851  ls src/extensions/documentation/documentation/
+  852  ls src/extensions/documentation/documentation/1
+  853  ls src/extensions/documentation/documentation/1.0.0/
+  854  ls /root/kwstr/kwstrapi/src/extensions/documentation/documentation/1.0.0/full_documentation.json
+  855  journalctl -xe
+  856  ls
+  857  cd kwstr/
+  858  cd kwstrapi/
+  859  ls
+  860  ls config/
+  861  ls src/components/
+  862  ls src/api/delivery/
+  863  pm2 stop kwstrapi
+  864  pm2 start kwstrapi
+  865  pm2 stop mwnext
+  866  pm2 start mwnext
+  867  pm2 list
+  868  pm2 stop mwnext
+  869  cd ../..
+  870  ls
+  871  cd mwnext/meubelwebnextdocpage/
+  872  npm start
+  873  pm2 list
+  874  pm2 start mwnext
+  875  pm2 list
+  876  npm star
+  877  pm2 -h
+  878  pm2 status
+  879  pm2 monitor mwnext
+  880  pm2 start mwnext
+  881  pm2 list
+  882  pm2 monitor mwnext
+  883  pm2 unmonitor mwnext
+  884  pm2 stop mwnext
+  885  pm2 start npm --name "mwnext" -- start
+  886  pm2 list
+  887  pm2 kill 3
+  888  pm2 kill mwnext
+  889  pm2 del 3
+  890  pm2 list
+  891  pm2 status
+  892  pm2 l
+  893  pm2 restart kwnext
+  894  pm2 restart kwnext
+  895  node -v
+  896  ufw status
+  897  ufw enable
+  898  pm2 l
+  899  pm2l
+  900  pm2 l
+  901  pm2 restart kwstrapi
+  902  pm2 
+  903  ls
+  904  pm2 l
+  905  pm2 restart kwstrapi
+  906  pm2 status
+  907  exit
+  908  pm2 l
+  909  nano /etc/nginx/nginx.conf 
+  910  exit
+  911  pm2 l
+  912  exit
+  913  ls
+  914  pm2 l
+  915  journalctl -xe
+  916  pm2 l
+  917  tail -p 114594
+  918  tail --
+  919  tail --pid=114594
+  920  pm2 l
+  921  pm2
+  922  pm2 -h
+  923  pm2 logs
+  924  exit
+  925  ls
+  926  cd kwstr/
+  927  ;s
+  928  ls
+  929  cd kwstrapi/
+  930  ls
+  931  cd config/
+  932  ls
+  933  nano plugins.js 
+  934  cd ..
+  935  ls
+  936  pm2 kill kwstr
+  937  pm2 l
+  938  pm2 stop kwstr
+  939  pm2 stop kwstrapi
+  940  yarn build
+  941  pm2 start kwstrapi
+  942  pm2 l
+  943  pm2 stop kwstrapi
+  944  nano config/plugins.js 
+  945  pm2 stop kwstrapi
+  946  yarn build
+  947  pm2 start kwstrapi
+  948  nano config/plugins.js 
+  949  pm2 stop kwstrapi
+  950  yarn build
+  951  nano config/plugins.js 
+  952  yarn build
+  953  pm2 start kwstrapi
+  954  nano config/plugins.js 
+  955  pm2 stop kwstrapi
+  956  yarn build
+  957  pm2 start kwstrapi
+  958  pm2 l
+  959  pm2 restart kwstrapi
+  960  pm2 stop
+  961  pm2 stop kwstrapi
+  962  pm2 delete kwstrapi
+  963  pm2 start yarn --name kwstrapi -- start
+  964  pm2 l
+  965  pm2 kill kwstrapi
+  966  pm2 stop kwstrapi
+  967  pm2 delete kwstrapi
+  968  ls
+  969  cd kwstr/kwstrapi/
+  970  pm2 start yarn --name kwstrapi -- start
+  971  pm2 stop kwstrapi
+  972  pm2 delete kwstrapi
+  973  pm2 start yarn --name kwstrapi -- develop
+  974  pm2 l
+  975  pm2 stop kwstrapi
+  976  pm2 delete kwstrapi
+  977  pm2 start yarn --name kwstrapi -- start
+  978  pm2l
+  979  pm2 l
+  980  pm2 restart kwstrapi
+  981  pm2 stop kwstrapi
+  982  pm2 delete kwstrapi
+  983  pm2 start yarn --name kwstrapi -- develop
+  984  ls
+  985  apt install speedtest-cli
+  986  speedtest
+  987  apt remove speedtest-cli
+  988  exit
+  989  ls
+  990  nmap
+  991  nc
+  992  nc 84.164.4.16
+  993  nc 84.164.4.16 3389
+  994  apt install nmap
+  995  nmap -A 84.164.4.16 -p 3389
+  996  nmap -A 81.164.4.16 -p 3389
+  997  apt install speedtest-cli
+  998  speedtest
+  999  apt remove speedtest-cli
+ 1000  ls
+ 1001  exit
+ 1002  ls
+ 1003  ls kwnext/
+ 1004  ls
+ 1005  cd kwnext/keukenwebnextdocpage/
+ 1006  ls
+ 1007  cd ../..
+ 1008  cd kwstr/
+ 1009  cd kwstrapi/
+ 1010  ls
+ 1011  exit
+ 1012  ls
+ 1013  pm2 status
+ 1014  ping api.keukenweb.com
+ 1015  exit
+ 1016  ls
+ 1017  pm2 l
+ 1018  ls /etc/nginx/
+ 1019  nano /etc/nginx/nginx.conf 
+ 1020  exit
+ 1021  pm2 l
+ 1022  pm2 list
+ 1023  pm2 status
+ 1024  pm2 help
+ 1025  pm2 examples
+ 1026  pm2 -h
+ 1027  pm2 inspect kwstrapi
+ 1028  pm2 l
+ 1029  pm2 dash
+ 1030  pm2 restart kwstrapi
+ 1031  pm2 dash
+ 1032  ls
+ 1033  sudo lsof -i -P -n
+ 1034  ping 144.76.200.93
+ 1035  exit
+ 1036  ping 144.76.200.93
+ 1037  exit
+ 1038  pm2 dash
+ 1039  dig
+ 1040  dig +short -t a mail.huseyinonalone.com
+ 1041  dig +short -t a mail.huseyinonal.com
+ 1042  dig +short -t a mail.huseyinonalone.com
+ 1043  nmap
+ 1044  nmap 144.76.200.93
+ 1045  nmap -p0-65535 144.76.200.93
+ 1046  amavisd-new
+ 1047  ls
+ 1048  cd /etc/nginx/
+ 1049  ls
+ 1050  nano nginx.conf 
+ 1051  ping 144.76.200.93
+ 1052  ls
+ 1053  pm2 l
+ 1054  nano /etc/nginx/nginx.conf 
+ 1055  ls
+ 1056  nano /etc/nginx/nginx.conf 
+ 1057  nmap 0-65555 144.76.200.93
+ 1058  nmap 0-6555 144.76.200.93
+ 1059  nmap 0-65535 144.76.200.93
+ 1060  ufw
+ 1061  dpkg -l
+ 1062  dpkg -l > i.txt
+ 1063  ls
+ 1064  nano i.txt 
+ 1065  ls 
+ 1066  cd /
+ 1067  cd /root
+ 1068  ls
+ 1069  clear
+ 1070  ufw\
+ 1071  ufw
+ 1072  ufw status
+ 1073  nmap 0-65535 144.76.200.93
+ 1074  systemctl status nginx
+ 1075  systemctl status iredadmin
+ 1076  systemctl status iredmail
+ 1077  systemctl status iredapd
+ 1078  systemctl status ired
+ 1079  systemctl status dovecot
+ 1080  systemctl status postfic
+ 1081  systemctl status postfix
+ 1082  apt remove postfix
+ 1083  nmap 0-65535 144.76.200.93
+ 1084  systemctl status nginx
+ 1085  systemctl start nginx
+ 1086  systemctl status nginx
+ 1087  netstat -anpe | grep "LISTEN"
+ 1088  systemctl status nginx
+ 1089  systemctl stop nginx
+ 1090  systemctl start nginx
+ 1091  journalctl -xe
+ 1092  htop
+ 1093  systemctl status nginx
+ 1094  nano /etc/nginx/nginx.conf 
+ 1095  nmap 0-65535 144.76.200.93
+ 1096  ping 144.76.200.93
+ 1097  traceroute electronova.be
+ 1098  nmap 0-65535 144.76.200.93
+ 1099  nmap -p0-65535 144.76.200.93
+ 1100  nmap -p0-65535 144.76.200.93 -T5
+ 1101  nmap 144.76.200.93 -T5
+ 1102  nmap 144.76.200.93
+ 1103  ls
+ 1104  nmap 144.76.200.93
+ 1105  om2 l
+ 1106  pm2 l
+ 1107  pm2 dash
+ 1108  ls
+ 1109  cd kwstr/
+ 1110  cd kwstrapi/
+ 1111  yarn strapi admin:reset-user-password --email="contact@huseyinonal.com" --password="HusStrapi24!"
+ 1112  ls
+ 1113  pm2 dash
+ 1114  ls
+ 1115  clear
+ 1116  pm2
+ 1117  htop
+ 1118  apt install fail2ban
+ 1119  fail2ban
+ 1120  ufw status
+ 1121  htop
+ 1122  cd /etc/fail2ban/
+ 1123  ls
+ 1124  nano fail2ban.conf 
+ 1125  nano jail.conf 
+ 1126  nano jail.d
+ 1127  ls jail.d
+ 1128  nano jail.d/defaults-debian.conf 
+ 1129  nano jail.conf 
+ 1130  ls jail.d
+ 1131  cd jail.d/
+ 1132  nano defaults-debian.conf 
+ 1133  nano ../jail.conf 
+ 1134  fail2ban-client status
+ 1135  ls
+ 1136  pm2 dash
+ 1137  exit
+ 1138  pm2 dash
+ 1139  xit
+ 1140  exit
+ 1141  pm2 dash
+ 1142  nano /etc/nginx/nginx.conf 
+ 1143  certbot
+ 1144  systemctl restart nginx
+ 1145  nano /etc/nginx/nginx.conf 
+ 1146  systemctl restart nginx
+ 1147  nginx -t
+ 1148  systemctl status nginx.service
+ 1149  systemctl stop nginx
+ 1150  systemctl restart nginx
+ 1151  sudo lsof -i -P -n | grep LISTEN
+ 1152  systemctl stop nginx
+ 1153  sudo lsof -i -P -n | grep LISTEN
+ 1154  systemctl stop nginx
+ 1155  sudo lsof -i -P -n | grep LISTEN
+ 1156  systemctl status nginx
+ 1157  systemctl status nginx.service
+ 1158  systemctl stop nginx.service
+ 1159  sudo lsof -i -P -n | grep LISTEN
+ 1160  reboot
+ 1161  pm2 l
+ 1162  pm2 save
+ 1163  pm2 l
+ 1164  pm2 start
+ 1165  certbot
+ 1166  htop
+ 1167  pm2
+ 1168  ls
+ 1169  cd kwstr/kwstrapi/
+ 1170  ls
+ 1171  pm2 start yarn --name kwstrapi -- develop
+ 1172  cd ../../mwstr/mwstrapi/
+ 1173  pm2 start yarn --name mwstrapi -- develop
+ 1174  cd ../../mwnext/
+ 1175  ls
+ 1176  cd meubelwebnextdocpage/
+ 1177  ls
+ 1178  pm2 start npm --name "mwnext" -- start
+ 1179  cd ../../kwnext/keukenwebnextdocpage/
+ 1180  pm2 start npm --name "kwnext" -- start
+ 1181  pm2 save
+ 1182  pm2 startup
+ 1183  pm2 save
+ 1184  pm2 startup
+ 1185  pm2 save
+ 1186  pm2 l
+ 1187  cd /etc/nginx/
+ 1188  nano nginx.conf 
+ 1189  sudo lsof -i -P -n | grep LISTEN
+ 1190  nano nginx.conf 
+ 1191  systemctl restart nginx
+ 1192  certbot
+ 1193  pm2 dash
+ 1194  cd kwnext/
+ 1195  cd keukenwebnextdocpage/
+ 1196  cd public/
+ 1197  ls
+ 1198  cp 1logo.svg 2logo.svg
+ 1199  ls
+ 1200  ls
+ 1201  nano i.txt 
+ 1202  rm i.txt 
+ 1203  cd kwstr/
+ 1204  ls
+ 1205  cd kwstrapi/
+ 1206  ls
+ 1207  ls public/
+ 1208  cd public/
+ 1209  ls -fl
+ 1210  ls -lf
+ 1211  ls -fl
+ 1212  cd uploads/
+ 1213  ls
+ 1214  pm2 dash
+ 1215  cd ../..
+ 1216  cd ..
+ 1217  ls
+ 1218  cd kwnext/
+ 1219  ls
+ 1220  cd keukenwebnextdocpage/
+ 1221  ls
+ 1222  cd pp
+ 1223  u
+ 1224  cd public/
+ 1225  ls
+ 1226  where
+ 1227  path
+ 1228  pwd
+ 1229  cd ..
+ 1230  yarn build
+ 1231  pm2 l
+ 1232  pm2 restart kwnext
+ 1233  pm2 l
+ 1234  cd kwnext/keukenwebnextdocpage/
+ 1235  ls
+ 1236  yarn build
+ 1237  pm2 restart kwnext
+ 1238  ls
+ 1239  cd /root
+ 1240  ls
+ 1241  cd ..
+ 1242  cd 
+ 1243  ls
+ 1244  cd ..
+ 1245  ls
+ 1246  cd 
+ 1247  cd kwnext/keukenwebnextdocpage/public/
+ 1248  ls
+ 1249  rm 3logo.svg 
+ 1250  cd ..
+ 1251  ls
+ 1252  yarn build
+ 1253  pm2 restart kwnext
+ 1254  rm public/3logo.svg 
+ 1255  ls
+ 1256  yarn build
+ 1257  pm2 restart kwnext
+ 1258  ls
+ 1259  cd kwnext/
+ 1260  cd keukenwebnextdocpage/
+ 1261  ls
+ 1262  ls ..
+ 1263  cd ..
+ 1264  ls
+ 1265  cd kwstr/
+ 1266  ls
+ 1267  cd kwstrapi/
+ 1268  ls
+ 1269  cd ../../
+ 1270  ls
+ 1271  cd mwnext/
+ 1272  ls
+ 1273  cd meubelwebnextdocpage/
+ 1274  ls
+ 1275  ls ../../kwstr/
+ 1276  ls ../../kwstr/kwstrapi/
+ 1277  ls
+ 1278  cd 
+ 1279  ls
+ 1280  ls -fl
+ 1281  4'
+ 1282  ls
+ 1283  cd mwstr/
+ 1284  ls
+ 1285  cd mwstrapi/
+ 1286  ls
+ 1287  ls pi
+ 1288  ls public/
+ 1289  nano public/robots.txt 
+ 1290  ls
+ 1291  nano package.json 
+ 1292  ls
+ 1293  nano config/
+ 1294  nano config/api.js 
+ 1295  nano config/admin.js 
+ 1296  nano config/plugins.js 
+ 1297  nano config/server.js 
+ 1298  sudo lsof -i -P -n | grep LISTEN
+ 1299  ufw status
+ 1300  ls
+ 1301  ls database/
+ 1302  ls
+ 1303  ls build/
+ 1304  ls -fl build/
+ 1305  ls -f build/
+ 1306  ls build/
+ 1307  ls
+ 1308  nano config/database.js 
+ 1309  ls -fl
+ 1310  ls database/
+ 1311  apt insall mc
+ 1312  apt install mc
+ 1313  mc
+ 1314  ls
+ 1315  cd ..
+ 1316  ls
+ 1317  rm -rf mwstrapi/
+ 1318  ls
+ 1319  yarn create strapi-app mwstrapi
+ 1320  ls
+ 1321  psql
+ 1322  apt install postgresql
+ 1323  ls
+ 1324  psql
+ 1325  psql postgres
+ 1326  apt install postgresql
+ 1327  -u postgres -i
+ 1328  sudo -u postgres -i
+ 1329  systemctl restart postgresql
+ 1330  psql
+ 1331  ls
+ 1332  cd
+ 1333  ls
+ 1334  cd mwstr/
+ 1335  yarn create strapi-app mwstrapi
+ 1336  ls
+ 1337  cd mwstrapi/
+ 1338  ls
+ 1339  nano config/server.js 
+ 1340  nano ap
+ 1341  nano config/api.js 
+ 1342  yarn build
+ 1343  cd ../..
+ 1344  ls
+ 1345  cd kwstr/
+ 1346  cd kwstrapi/
+ 1347  strapi export
+ 1348  yarn strapi export
+ 1349  ls
+ 1350  cd ../..
+ 1351  ls
+ 1352  cd mwstr/
+ 1353  cd mwstrapi/
+ 1354  yarn strapi import ../../kwstr/kwstrapi/export_20230805232248.tar.gz.enc 
+ 1355  yarn strapi -f import ../../kwstr/kwstrapi/export_20230805232248.tar.gz.enc 
+ 1356  yarn strapi import -f ../../kwstr/kwstrapi/export_20230805232248.tar.gz.enc 
+ 1357  ls
+ 1358  rm import*
+ 1359  ls
+ 1360  cm
+ 1361  mc
+ 1362  yarn build
+ 1363  yarn strapi import -f ../../kwstr/kwstrapi/export_20230805232248.tar.gz.enc 
+ 1364  yarn develop
+ 1365  cd ../..
+ 1366  cd mw
+ 1367  cd mwstr/
+ 1368  ls
+ 1369  rm mwstrapi/
+ 1370  rm -rf mwstrapi/
+ 1371  yarn create strapi-app mwstrapi
+ 1372  ls
+ 1373  mc
+ 1374  yarn build
+ 1375  ls
+ 1376  cd mwstrapi/
+ 1377  w
+ 1378  yarn build
+ 1379  yarn develop
+ 1380  ls
+ 1381  nano jsconfig.json 
+ 1382  ls
+ 1383  nano config/
+ 1384  nano config/server.js 
+ 1385  yarn build
+ 1386  yarn develop
+ 1387  ls
+ 1388  ls -fl
+ 1389  nano .enc
+ 1390  nano .env
+ 1391  yarn develop
+ 1392  pm2 start mwstrapi
+ 1393  pm2 stop mwstrapi
+ 1394  yarn strapi import -f ../../kwstr/kwstrapi/export_20230805232248.tar.gz.enc 
+ 1395  pm2 start mwstrapi
+ 1396  ls
+ 1397  cd ../..
+ 1398  ls
+ 1399  cd mwnext/
+ 1400  ls
+ 1401  cd meubelwebnextdocpage/
+ 1402  ls
+ 1403  mc
+ 1404  ls
+ 1405  cd public/
+ 1406  ls
+ 1407  mv 3logo.svg 1logo.svg
+ 1408  cd ..
+ 1409  npm build
+ 1410  yarn build
+ 1411  pm2 start mwnext
+ 1412  ls
+ 1413  cd public/
+ 1414  ls
+ 1415  mv 1logo.svg 4logo.svg
+ 1416  yarn build
+ 1417  pm2 start mwnext
+ 1418  cd ../..
+ 1419  ls
+ 1420  cd ..
+ 1421  ls
+ 1422  cd kwstr/
+ 1423  ls
+ 1424  cd kwstrapi/
+ 1425  l
+ 1426  ls
+ 1427  rm export_20230805232248.tar.gz.enc 
+ 1428  yarn strapi export
+ 1429  ls
+ 1430  nano config/database.js 
+ 1431  ls
+ 1432  nano .env
+ 1433  yarn build
+ 1434  pm2 restart kwstrapi
+ 1435  yarn strapi import -f export_20230806003157.tar.gz.enc 
+ 1436  ls
+ 1437  ls -fl
+ 1438  nano .env
+ 1439  ls
+ 1440  ls config/
+ 1441  nano config/admin.js 
+ 1442  nano config/api.js 
+ 1443  nano config/database.js 
+ 1444  nano config/plugins.js 
+ 1445  nano config/server.js 
+ 1446  ls
+ 1447  ls public/
+ 1448  nano package.json 
+ 1449  ls src/
+ 1450  mc
+ 1451  ls
+ 1452  cd ..
+ 1453  ls
+ 1454  rm -rf kwstrapi/
+ 1455  yarn create strapi-app kwstrapi
+ 1456  pm2 l
+ 1457  pm2 stop kwstrapi
+ 1458  ls
+ 1459  cd kwstrapi/
+ 1460  ls
+ 1461  ls -fl
+ 1462  nano .env
+ 1463  mc
+ 1464  cd config/
+ 1465  nano server.js 
+ 1466  nano api.js 
+ 1467  ls
+ 1468  yarn build
+ 1469  ls
+ 1470  nano middlewares.js 
+ 1471  pm2 start kwstrapi
+ 1472  yarn strapi import -f export_20230806003157.tar.gz.enc 
+ 1473  cd..
+ 1474  yarn strapi import -f export_20230806003157.tar.gz.enc 
+ 1475  cd ..
+ 1476  ls
+ 1477  cd ../../mwstr/mwstrapi/
+ 1478  yarn strapi export
+ 1479  ls
+ 1480  cd kwnext/keukenwebnextdocpage/
+ 1481  ls
+ 1482  yarn build
+ 1483  pm2 restart kwnext
+ 1484  cd ../..
+ 1485  ls
+ 1486  cd kwstr/
+ 1487  ls
+ 1488  cd kwstrapi/
+ 1489  ls
+ 1490  ls-l
+ 1491  ls -l
+ 1492  ls config/
+ 1493  ls
+ 1494  cd config/
+ 1495  ls
+ 1496  nano admin.js 
+ 1497  nano api.js 
+ 1498  nano database.js 
+ 1499  nano middlewares.js 
+ 1500  nano plugins.js 
+ 1501  nano server.js 
+ 1502  pm2 stop mwstr
+ 1503  pm2 stop mwstrapi
+ 1504  pm2 stop mwnext
+ 1505  cd ..
+ 1506  ls
+ 1507  ls database/
+ 1508  ls database/migrations/
+ 1509  ls
+ 1510  ls -fl database/
+ 1511  ls -fl database/migrations/
+ 1512  ls
+ 1513  ls src/
+ 1514  ls src/components/
+ 1515  ls src/admin/
+ 1516  ls src/extensions/
+ 1517  nano /etc/nginx/nginx.conf 
+ 1518  cm
+ 1519  cd ../../mwstr/mwstrapi/
+ 1520  ls
+ 1521  nano config/database.js 
+ 1522  ls
+ 1523  ls -fl
+ 1524  nano .env
+ 1525  ls
+ 1526  pmé l
+ 1527  pm2 l
+ 1528  pm2 dash
+ 1529  s
+ 1530  ls
+ 1531  htop
+ 1532  ls
+ 1533  cd mwnext/meubelwebnextdocpage/
+ 1534  yarn build
+ 1535  pm2 restart mwnext
+ 1536  cd mwnext/meubelwebnextdocpage/
+ 1537  yarn build
+ 1538  pm2 restart mwnext
+ 1539  cd mwstr/mwstrapi/
+ 1540  pm2 restart mwstrapi
+ 1541  nano config/plugins.js 
+ 1542  mv config/plugins.js config/1plugins.js
+ 1543  yarn build
+ 1544  pm2 restart mwstrapi
+ 1545  nano config/plugins.js 
+ 1546  nano config/1plugins.js 
+ 1547  npm install strapi-provider-upload-minio-ce
+ 1548  yarn install strapi-provider-upload-minio-ce
+ 1549  yarn add strapi-provider-upload-minio-ce
+ 1550  nano config/1plugins.js 
+ 1551  mv config/1plugins.js config/plugins.js
+ 1552  yarn build
+ 1553  pm2 restart mwstrapi
+ 1554  nano config/plugins.js 
+ 1555  yarn build
+ 1556  pm2 restart mwstrapi
+ 1557  cd ../../kwstr/kwstrapi/
+ 1558  yarn add strapi-provider-upload-minio-ce
+ 1559  nano config/plugins.js
+ 1560  yarn build
+ 1561  pm2 restart kwstrapi
+ 1562  pm2 restart kwstrapi --update-env
+ 1563  pm2 l
+ 1564  ls
+ 1565  cd mwstr/mwstrapi/
+ 1566  ls
+ 1567  cd config/
+ 1568  ls
+ 1569  nano plugins.js
+ 1570  cd ..
+ 1571  yarn build
+ 1572  pm2 restart mwstrapi
+ 1573  pm l
+ 1574  pm2 l
+ 1575  pm2 restart mwstrapi
+ 1576  pm2 restart mwstrapi --update-env
+ 1577  pm2 dash
+ 1578  apt install pgcli
+ 1579  pip
+ 1580  apt install python
+ 1581  pip
+ 1582  apt install pip
+ 1583  pip
+ 1584  pip install pgcli
+ 1585  pgcli
+ 1586  less /etc/passwd
+ 1587  sudo postgres
+ 1588  su postgres
+ 1589  ls
+ 1590  exit
+ 1591  ls
+ 1592  pm2 l
+ 1593  ls
+ 1594  ps
+ 1595  pm2 l
+ 1596  ls
+ 1597  ls -fl kwstr/kwstrapi/
+ 1598  psql
+ 1599  journalctl -xe
+ 1600  ls
+ 1601  ufw status
+ 1602  ls
+ 1603  su postgres
+ 1604  ls
+ 1605  c dkw
+ 1606  cd kwstr/
+ 1607  ls
+ 1608  rm -rf src/
+ 1609  cd kwstrapi/
+ 1610  ls
+ 1611  nano src/index.js 
+ 1612  nano src/admin/app.example.js 
+ 1613  pm2 dash
+ 1614  ls
+ 1615  cd /
+ 1616  ls mnt/
+ 1617  cd mnt/
+ 1618  ls
+ 1619  cd /dev
+ 1620  ls
+ 1621  ls tty0
+ 1622  ls -fl
+ 1623  ls
+ 1624  pm2 l
+ 1625  pm dash
+ 1626  pm2 dash
+ 1627  pm2 restart mwstrapi
+ 1628  ls
+ 1629  nano /etc/nginx/nginx.conf 
+ 1630  nginx -t
+ 1631  nano /etc/nginx/nginx.conf 
+ 1632  nginx -t
+ 1633  systemctl restart nginx
+ 1634  nano /etc/nginx/nginx.conf 
+ 1635  ls
+ 1636  pm2 dash
+ 1637  ls
+ 1638  mkdir mfhweb
+ 1639  cd mfhweb/
+ 1640  mkdir GroupMFHWebs
+ 1641  rm -rf GroupMFHWebs/
+ 1642  su psql
+ 1643  cat /etc/passwd
+ 1644  su postgres
+ 1645  ls
+ 1646  yarn create strapi-app mfhstrapi
+ 1647  ls
+ 1648  cd mfhstrapi/
+ 1649  cd
+ 1650  ls
+ 1651  cd mfhweb/mfhstrapi/
+ 1652  ls
+ 1653  nano jsconfig.json 
+ 1654  nano package.json 
+ 1655  ls
+ 1656  cd config/
+ 1657  ls
+ 1658  nano admin.js 
+ 1659  nano server.js 
+ 1660  ls
+ 1661  nano database.js 
+ 1662  ls
+ 1663  cd ..
+ 1664  ls
+ 1665  ls -fl
+ 1666  nano .env
+ 1667  yarn develop
+ 1668  ls
+ 1669  nano /etc/nginx/nginx.conf 
+ 1670  nginx -t
+ 1671  systemctl restart nginx
+ 1672  certbot
+ 1673  ls
+ 1674  cd ..
+ 1675  git clone https://github.com/huseyinonalcom/GroupMFHWebs
+ 1676  cd GroupMFHWebs/
+ 1677  chown -R mfhpostftp _posts/
+ 1678  npm install
+ 1679  npm run build
+ 1680  nano ~/.bash_history 
+ 1681  ls
+ 1682  nano package.json 
+ 1683  ls -fl
+ 1684  nano .next/
+ 1685  ls
+ 1686  nano ../../kwnext/keukenwebnextdocpage/package.json 
+ 1687  nano package.json 
+ 1688  pm2 start npm --name "mfhnext" -- start
+ 1689  pm2 save
+ 1690  pm2 list
+ 1691  pm2 restart mfhnext
+ 1692  nano package.json 
+ 1693  pm2 restart mfhnext
+ 1694  pm2 list
+ 1695  certbot
+ 1696  cd ../mfhstrapi/
+ 1697  pm2 start yarn --name mfhstrapi -- develop
+ 1698  pm2 l
+ 1699  pm2 save
+ 1700  yarn build
+ 1701  pm2 restart mfhstrapi
+ 1702  pm2 restart mfhstrapi --update-env
+ 1703  ls
+ 1704  nano package.json 
+ 1705  ls
+ 1706  cd config/
+ 1707  ls
+ 1708  nano admin.js 
+ 1709  nano api.js 
+ 1710  ls
+ 1711  nano middlewares.js 
+ 1712  nano server.js 
+ 1713  cd ..
+ 1714  nano .env
+ 1715  yarn build
+ 1716  pm2 restart mfhstrapi --update-env
+ 1717  cd ..
+ 1718  ls
+ 1719  pm2 dash
+ 1720  ls
+ 1721  cd mfhweb/
+ 1722  ls
+ 1723  rm -rf GroupMFHWebs
+ 1724  git clone https://github.com/huseyinonalcom/GroupMFHWebs
+ 1725  cd GroupMFHWebs/
+ 1726  npm install
+ 1727  npm run build
+ 1728  pm2 start npm --name "mfhnext" -- start
+ 1729  pm2 kill 4
+ 1730  pm2 list
+ 1731  pm2 kill mfhnext
+ 1732  pm2 stop mfhnext
+ 1733  pm2 help
+ 1734  pm2 delete mfhnext
+ 1735  ls
+ 1736  npm install
+ 1737  npm run build
+ 1738  ls
+ 1739  nano package.json
+ 1740  nano /etc/nginx/nginx.conf 
+ 1741  nano ../../mwnext/meubelwebnextdocpage/package.json 
+ 1742  nano package.json 
+ 1743  nano ../../mwnext/meubelwebnextdocpage/package.json 
+ 1744  npm run build
+ 1745  pm2 start npm --name "mfhnext" -- start
+ 1746  pm2 l
+ 1747  nano package.json 
+ 1748  pm2 l
+ 1749  ls
+ 1750  cd mfhweb/
+ 1751  nano RebuildScript.sh
+ 1752  ls -fl
+ 1753  chmod u+x RebuildScript.sh 
+ 1754  ./RebuildScript.sh 
+ 1755  pm2 l
+ 1756  ls
+ 1757  cd mfhweb/
+ 1758  ls
+ 1759  ./RebuildScript.sh 
+ 1760  pm2 l
+ 1761  pm2 dash
+ 1762  ls
+ 1763  cd mfhweb/
+ 1764  cd GroupMFHWebs/
+ 1765  pm2 restart mfhnext
+ 1766  cd ..
+ 1767  ./RebuildScript.sh 
+ 1768  journalctl -xe
+ 1769  who
+ 1770  time
+ 1771  when
+ 1772  what
+ 1773  who
+ 1774  where
+ 1775  whoami
+ 1776  who
+ 1777  exit
+ 1778  ls
+ 1779  cd mfhweb/
+ 1780  ls
+ 1781  nano RebuildScript.sh 
+ 1782  ./RebuildScript.sh 
+ 1783  pm2 dash
+ 1784  ls
+ 1785  cd mwstr/
+ 1786  ls
+ 1787  cd mwstrapi/
+ 1788  ls
+ 1789  nano config/api.js 
+ 1790  pm2 dash
+ 1791  ls
+ 1792  cd mfhweb/
+ 1793  ls
+ 1794  ./RebuildScript.sh 
+ 1795  pm2 dash
+ 1796  ls
+ 1797  cd mfhweb/
+ 1798  ls
+ 1799  ./RebuildScript.sh 
+ 1800  pm2 dash
+ 1801  pm2 l
+ 1802  pm2 restart mfhstrapi
+ 1803  pm2 l
+ 1804  pm2 restart mfhstrapi
+ 1805  pm2 restart mfhstrapi -update-env
+ 1806  pm2 restart mfhstrapi --update-env
+ 1807  pm2 l
+ 1808  ./RebuildScript.sh 
+ 1809  pm2 l
+ 1810  pm2 dash mfhstrapi
+ 1811  pm2 logs
+ 1812  ls
+ 1813  cd mfhweb/
+ 1814  ./RebuildScript.sh 
+ 1815  ls
+ 1816  pm2 l
+ 1817  ls
+ 1818  cd mfhweb/
+ 1819  ./RebuildScript.sh 
+ 1820  cd mfhweb/
+ 1821  ls
+ 1822  ./RebuildScript.sh 
+ 1823  who
+ 1824  cd mfhweb/
+ 1825  ./RebuildScript.sh 
+ 1826  cd mfhweb/
+ 1827  ./RebuildScript.sh 
+ 1828  cd mfhweb/
+ 1829  ./RebuildScript.sh 
+ 1830  cd mfhweb/
+ 1831  ./RebuildScript.sh 
+ 1832  cd mfhweb/
+ 1833  ./RebuildScript.sh 
+ 1834  ls
+ 1835  cd mfhweb/
+ 1836  ls
+ 1837  cd GroupMFHWebs/
+ 1838  ls
+ 1839  sitemap -t
+ 1840  nano package.json
+ 1841  next-sitemap
+ 1842  npm next-sitemap
+ 1843  npm help
+ 1844  npm run next-sitemap
+ 1845  npm run
+ 1846  npm run postbuild
+ 1847  ls
+ 1848  cd ..
+ 1849  ls
+ 1850  ./RebuildScript.sh 
+ 1851  ls
+ 1852  cd mfhweb/
+ 1853  ./RebuildScript.sh 
+ 1854  cd mfhweb/
+ 1855  ./RebuildScript.sh 
+ 1856  ls
+ 1857  cd mfhweb/
+ 1858  ls
+ 1859  ./RebuildScript.sh 
+ 1860  ls
+ 1861  cd mfhweb/
+ 1862  ./RebuildScript.sh 
+ 1863  cd mfhweb/
+ 1864  ./RebuildScript.sh 
+ 1865  ls
+ 1866  nano package-lock.json 
+ 1867  cd mfhweb/
+ 1868  ./RebuildScript.sh 
+ 1869  cd mfhweb/
+ 1870  ./RebuildScript.sh 
+ 1871  ls
+ 1872  cd ..
+ 1873  ls
+ 1874  cd /etc/nginx/
+ 1875  ls
+ 1876  nano nginx.conf 
+ 1877  nginx -t
+ 1878  systemctl restart nginx
+ 1879  pm2l
+ 1880  pm2 l
+ 1881  pm2 dash
+ 1882  ls
+ 1883  cd mfhweb/
+ 1884  ls
+ 1885  cd GroupMFHWebs/
+ 1886  ls
+ 1887  cd .next/
+ 1888  ls
+ 1889  ls static/
+ 1890  ls static/media/
+ 1891  ls cache/images/
+ 1892  ls -fl cache/images/
+ 1893  ls -lf
+ 1894  ls -fl
+ 1895  cd /etc/nginx/
+ 1896  nano nginx.conf
+ 1897  ls
+ 1898  psql
+ 1899  ls
+ 1900  exit
+ 1901  pm2 dash
+ 1902  ls
+ 1903  cd mwnext/
+ 1904  ls
+ 1905  cd meubelwebnextdocpage/
+ 1906  ls
+ 1907  cd public/
+ 1908  ls
+ 1909  rm mweb.zip 
+ 1910  ls
+ 1911  ls -fl
+ 1912  ls -lf
+ 1913  ls
+ 1914  ls -l
+ 1915  ls -f
+ 1916  ls -fl
+ 1917  ls -f
+ 1918  ls -l
+ 1919  ls -lf
+ 1920  ls -fl
+ 1921  ls
+ 1922  cd mwstr/
+ 1923  ls
+ 1924  cd mwstrapi/
+ 1925  ls
+ 1926  cd config/
+ 1927  ls
+ 1928  nano api.js 
+ 1929  nano ~/kwstr/kwstrapi/config/a
+ 1930  nano ~/kwstr/kwstrapi/config/api.js 
+ 1931  pm2 l
+ 1932  pm2 pause mwstrapi
+ 1933  pm2 l
+ 1934  pm2 stop mwstrapi
+ 1935  ls
+ 1936  cd ..
+ 1937  yarn build
+ 1938  pm2 start mwstrapi
+ 1939  pm2 stop kwstrapi
+ 1940  cd ~/kwstr/kwstrapi/
+ 1941  ls
+ 1942  yarn build
+ 1943  pm2 start kwstrapi
+ 1944  ls
+ 1945  cp mwstr/ hdstr/
+ 1946  cp -r mwstr/ hdstr/
+ 1947  ls
+ 1948  cd hdstr/
+ 1949  ls
+ 1950  mv mwstrapi/hdstrapi
+ 1951  mv /mwstrapi /hdstrapi
+ 1952  ls
+ 1953  mv mwstrapi/ hdstrapi/
+ 1954  ls
+ 1955  cd hdstrapi/
+ 1956  ls
+ 1957  psql
+ 1958  history > history

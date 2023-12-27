@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shelves",
+  "info": {
+    "singularName": "shelf",
+    "pluralName": "shelves",
+    "displayName": "Shelf",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "region": {
+      "type": "string",
+      "required": true,
+      "default": "A"
+    },
+    "stack": {
+      "type": "string",
+      "default": "0",
+      "required": true
+    },
+    "level": {
+      "type": "string",
+      "default": "0",
+      "required": true
+    },
+    "establishment": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::establishment.establishment",
+      "inversedBy": "shelves"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "shelves"
+    },
+    "stock": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "supplier_order_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::supplier-order-product.supplier-order-product",
+      "mappedBy": "shelf"
+    }
+  }
+}

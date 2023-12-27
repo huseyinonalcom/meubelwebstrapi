@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "supplier_orders",
+  "info": {
+    "singularName": "supplier-order",
+    "pluralName": "supplier-orders",
+    "displayName": "SupplierOrder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "reference": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "supplier": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::supplier.supplier",
+      "inversedBy": "supplier_orders"
+    },
+    "discount": {
+      "type": "decimal",
+      "default": 0
+    },
+    "establishment": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::establishment.establishment",
+      "inversedBy": "supplier_orders"
+    },
+    "completed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "supplier_order_products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::supplier-order-product.supplier-order-product",
+      "mappedBy": "supplier_order"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::user-info.user-info",
+      "inversedBy": "supplier_orders"
+    }
+  }
+}

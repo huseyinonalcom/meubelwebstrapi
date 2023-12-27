@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "supplier_order_products",
+  "info": {
+    "singularName": "supplier-order-product",
+    "pluralName": "supplier-order-products",
+    "displayName": "SupplierOrderProduct",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amountOrdered": {
+      "type": "integer",
+      "default": 1,
+      "required": true
+    },
+    "amountDelivered": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product.product",
+      "inversedBy": "supplier_order_products"
+    },
+    "supplier_order": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::supplier-order.supplier-order",
+      "inversedBy": "supplier_order_products"
+    },
+    "delivery": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::delivery.delivery",
+      "inversedBy": "supplier_order_products"
+    },
+    "shelf": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::shelf.shelf",
+      "inversedBy": "supplier_order_products"
+    },
+    "value": {
+      "type": "decimal",
+      "required": true
+    },
+    "tax": {
+      "type": "integer",
+      "required": true
+    },
+    "subTotal": {
+      "type": "decimal",
+      "required": true
+    }
+  }
+}

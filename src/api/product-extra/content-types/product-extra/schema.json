@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_extras",
+  "info": {
+    "singularName": "product-extra",
+    "pluralName": "product-extras",
+    "displayName": "ProductExtra",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "barcode": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "decimal"
+    },
+    "per_box": {
+      "type": "integer"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product",
+      "inversedBy": "product_extra"
+    },
+    "packaged_weight": {
+      "type": "decimal"
+    },
+    "packaged_dimensions": {
+      "type": "string"
+    },
+    "seat_height": {
+      "type": "integer"
+    },
+    "diameter": {
+      "type": "decimal"
+    },
+    "surface_area": {
+      "type": "string"
+    }
+  }
+}

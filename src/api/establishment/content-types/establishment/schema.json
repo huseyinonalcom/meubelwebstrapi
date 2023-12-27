@@ -1,0 +1,102 @@
+{
+  "kind": "collectionType",
+  "collectionName": "establishments",
+  "info": {
+    "singularName": "establishment",
+    "pluralName": "establishments",
+    "displayName": "Establishment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "documents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::document.document",
+      "mappedBy": "establishment"
+    },
+    "deliveries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::delivery.delivery",
+      "mappedBy": "establishment"
+    },
+    "supplier_orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::supplier-order.supplier-order",
+      "mappedBy": "establishment"
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "taxID": {
+      "type": "string",
+      "required": true
+    },
+    "bankAccount1": {
+      "type": "string",
+      "required": true
+    },
+    "bankAccount2": {
+      "type": "string"
+    },
+    "bankAccount3": {
+      "type": "string"
+    },
+    "phone2": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::address.address",
+      "inversedBy": "establishment"
+    },
+    "shelves": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::shelf.shelf",
+      "mappedBy": "establishment"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::user-info.user-info",
+      "mappedBy": "establishment"
+    },
+    "clients": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::client.client",
+      "mappedBy": "establishment"
+    }
+  }
+}

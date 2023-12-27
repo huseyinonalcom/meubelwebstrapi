@@ -1,0 +1,69 @@
+{
+  "kind": "collectionType",
+  "collectionName": "support_tickets",
+  "info": {
+    "singularName": "support-ticket",
+    "pluralName": "support-tickets",
+    "displayName": "SupportTicket",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "document": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::document.document",
+      "inversedBy": "support_tickets"
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "note": {
+      "type": "string"
+    },
+    "solved": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "openDate": {
+      "type": "date",
+      "required": true
+    },
+    "solvedDate": {
+      "type": "date"
+    },
+    "solution": {
+      "type": "text"
+    },
+    "reference": {
+      "type": "text"
+    },
+    "files": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "deleted": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "support_ticket_messages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::support-ticket-message.support-ticket-message",
+      "mappedBy": "support_ticket"
+    }
+  }
+}
