@@ -65,7 +65,7 @@ module.exports = createCoreController(
         if (
           !data ||
           !data.attributes.document.data ||
-          data.attributes.document.attributes.client.data.id !==
+          data.attributes.document.data.attributes.client.data.id !==
             userWithRole.client_info.id
         ) {
           return ctx.notFound("Support ticket not found");
@@ -83,8 +83,26 @@ module.exports = createCoreController(
           populate: { role: true, client_info: true, user_info: true },
         }
       );
+      if (
+        userWithRole &&
+        userWithRole.role &&
+        userWithRole.role.name === "Client"
+      ) {
+        const clientID = userWithRole.client_info.id;
+        const documentID = ctx.request.body.data.document;
 
-      // check to make sure user is creating a ticket on a document related to them, respond with some error
+        const document = await strapi.db
+          .query("api::document.document")
+          .findOne({
+            where: { id: documentID, client: clientID },
+          });
+
+        if (!document) {
+          return ctx.notFound(
+            "Cannot create a ticket for this document with given ID"
+          );
+        }
+      }
 
       const { data, meta } = await super.create(ctx);
       return { data, meta };
