@@ -45,8 +45,6 @@ module.exports = createCoreController("api::address.address", ({ strapi }) => ({
     return { data, meta };
   },
   async findOne(ctx) {
-    // fetch filters from received query
-    const { filters } = ctx.query;
 
     // Fetch user with role, client_info and user_info information
     const userWithRole = await strapi.entityService.findOne(
