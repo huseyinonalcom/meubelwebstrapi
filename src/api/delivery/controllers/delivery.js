@@ -11,7 +11,6 @@ module.exports = createCoreController(
   ({ strapi }) => ({
     async find(ctx) {
       const { filters } = ctx.query;
-
       const userWithRole = await strapi.entityService.findOne(
         "plugin::users-permissions.user",
         ctx.state.user.id,
@@ -20,20 +19,30 @@ module.exports = createCoreController(
         }
       );
 
-      const clientID = userWithRole.client_info.id;
-
       if (
         userWithRole &&
         userWithRole.role &&
         userWithRole.role.name === "Client"
       ) {
+        const clientID = userWithRole.client_info.id;
+        const documents = await strapi.db
+          .query("api::document.document")
+          .findMany({
+            select: ["id"],
+            where: { client: clientID },
+            populate: false,
+          });
+        const documentIDs = documents.map((doc) => doc.id);
+        // Modify query to filter deliveries based on document IDs
         ctx.query = {
           ...ctx.query,
           filters: {
             ...filters,
-            document_product: {
+            document_products: {
               document: {
-                client: clientID,
+                id: {
+                  $in: documentIDs,
+                },
               },
             },
           },
@@ -41,7 +50,6 @@ module.exports = createCoreController(
       }
 
       const { data, meta } = await super.find(ctx);
-
       if (!data) {
         return ctx.notFound("No deliveries found");
       }
@@ -64,12 +72,20 @@ module.exports = createCoreController(
         userWithRole.role &&
         userWithRole.role.name === "Client"
       ) {
-        if (
-          !data ||
-          !data.attributes.document_product.data.attributes.document ||
-          data.attributes.document_product.data.attributes.document.data
-            .attributes.client.data.id !== userWithRole.client_info.id
-        ) {
+        const clientID = userWithRole.client_info.id;
+        const documents = await strapi.db
+          .query("api::document.document")
+          .findMany({
+            select: ["id"],
+            where: { client: clientID },
+            populate: false,
+          });
+        const documentIDs = documents.map((doc) => doc.id);
+        const hasClientDocument = data.attributes.document_products.data.some(
+          (docProduct) =>
+            documentIDs.includes(docProduct.attributes.document.data.id)
+        );
+        if (!hasClientDocument) {
           return ctx.notFound("Delivery not found");
         }
       }

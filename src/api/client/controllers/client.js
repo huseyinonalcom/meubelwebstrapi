@@ -7,6 +7,42 @@
 const { createCoreController } = require("@strapi/strapi").factories;
 
 module.exports = createCoreController("api::client.client", ({ strapi }) => ({
+  async find(ctx) {
+    const { filters } = ctx.query;
+    const userWithRole = await strapi.entityService.findOne(
+      "plugin::users-permissions.user",
+      ctx.state.user.id,
+      {
+        populate: { role: true, client_info: true, user_info: true },
+      }
+    );
+
+    if (
+      userWithRole &&
+      userWithRole.role &&
+      userWithRole.role.name === "Client"
+    ) {
+      const clientID = userWithRole.client_info.id;
+      // Modify query to filter deliveries based on document IDs
+      ctx.query = {
+        ...ctx.query,
+        filters: {
+          ...filters,
+          id: clientID,
+        },
+      };
+    }
+
+    const { data, meta } = await super.find(ctx);
+
+    if (!data) {
+      return ctx.notFound("No clients found");
+    }
+
+    console.log(data);
+
+    return { data, meta };
+  },
   async findOne(ctx) {
     const userWithRole = await strapi.entityService.findOne(
       "plugin::users-permissions.user",
