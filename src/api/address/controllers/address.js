@@ -92,7 +92,7 @@ module.exports = createCoreController("api::address.address", ({ strapi }) => ({
         !addressToUpdate.client ||
         addressToUpdate.client.id !== userWithRole.client_info.id
       ) {
-        return ctx.notFound("Address not found");
+        return ctx.notFound("Address creation failed!");
       }
     }
 

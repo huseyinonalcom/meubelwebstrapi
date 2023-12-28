@@ -75,12 +75,6 @@
       "target": "api::establishment.establishment",
       "inversedBy": "clients"
     },
-    "support_ticket_messages": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::support-ticket-message.support-ticket-message",
-      "mappedBy": "client"
-    },
     "login": {
       "type": "relation",
       "relation": "oneToOne",

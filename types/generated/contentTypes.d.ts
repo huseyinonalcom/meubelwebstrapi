@@ -955,11 +955,6 @@ export interface ApiClientClient extends Schema.CollectionType {
       'manyToOne',
       'api::establishment.establishment'
     >;
-    support_ticket_messages: Attribute.Relation<
-      'api::client.client',
-      'oneToMany',
-      'api::support-ticket-message.support-ticket-message'
-    >;
     login: Attribute.Relation<
       'api::client.client',
       'oneToOne',
@@ -1817,11 +1812,6 @@ export interface ApiSupportTicketMessageSupportTicketMessage
     message: Attribute.Text & Attribute.Required;
     dateTime: Attribute.DateTime & Attribute.Required;
     images: Attribute.Media;
-    client: Attribute.Relation<
-      'api::support-ticket-message.support-ticket-message',
-      'manyToOne',
-      'api::client.client'
-    >;
     user: Attribute.Relation<
       'api::support-ticket-message.support-ticket-message',
       'manyToOne',
