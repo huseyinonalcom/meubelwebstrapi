@@ -790,7 +790,7 @@ export interface ApiAddressAddress extends Schema.CollectionType {
   };
   attributes: {
     country: Attribute.String & Attribute.Required;
-    province: Attribute.String & Attribute.Required;
+    province: Attribute.String;
     city: Attribute.String & Attribute.Required;
     zipCode: Attribute.String & Attribute.Required;
     doorNumber: Attribute.String & Attribute.Required;
@@ -921,7 +921,7 @@ export interface ApiClientClient extends Schema.CollectionType {
   attributes: {
     firstName: Attribute.String & Attribute.Required;
     lastName: Attribute.String & Attribute.Required;
-    phone: Attribute.String & Attribute.Required;
+    phone: Attribute.String;
     createrFsID: Attribute.String;
     category: Attribute.String & Attribute.Required;
     company: Attribute.String;

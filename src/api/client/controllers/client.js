@@ -9,13 +9,16 @@ const { createCoreController } = require("@strapi/strapi").factories;
 module.exports = createCoreController("api::client.client", ({ strapi }) => ({
   async find(ctx) {
     const { filters } = ctx.query;
-    const userWithRole = await strapi.entityService.findOne(
-      "plugin::users-permissions.user",
-      ctx.state.user.id,
-      {
-        populate: { role: true, client_info: true, user_info: true },
+    var userWithRole;
+      if (ctx.state.auth.strategy.name == "users-permissions") {
+        userWithRole = await strapi.entityService.findOne(
+          "plugin::users-permissions.user",
+          ctx.state.user.id,
+          {
+            populate: { role: true, client_info: true, user_info: true },
+          }
+        );
       }
-    );
 
     if (
       userWithRole &&
@@ -39,22 +42,23 @@ module.exports = createCoreController("api::client.client", ({ strapi }) => ({
       return ctx.notFound("No clients found");
     }
 
-    console.log(data);
 
     return { data, meta };
   },
   async findOne(ctx) {
-    const userWithRole = await strapi.entityService.findOne(
-      "plugin::users-permissions.user",
-      ctx.state.user.id,
-      {
-        populate: { role: true, client_info: true, user_info: true },
+    var userWithRole;
+      if (ctx.state.auth.strategy.name == "users-permissions") {
+        userWithRole = await strapi.entityService.findOne(
+          "plugin::users-permissions.user",
+          ctx.state.user.id,
+          {
+            populate: { role: true, client_info: true, user_info: true },
+          }
+        );
       }
-    );
 
     const { data, meta } = await super.findOne(ctx);
 
-    console.log(data);
 
     if (
       userWithRole &&
@@ -69,13 +73,16 @@ module.exports = createCoreController("api::client.client", ({ strapi }) => ({
     return { data, meta };
   },
   async update(ctx) {
-    const userWithRole = await strapi.entityService.findOne(
-      "plugin::users-permissions.user",
-      ctx.state.user.id,
-      {
-        populate: { role: true, client_info: true, user_info: true },
+    var userWithRole;
+      if (ctx.state.auth.strategy.name == "users-permissions") {
+        userWithRole = await strapi.entityService.findOne(
+          "plugin::users-permissions.user",
+          ctx.state.user.id,
+          {
+            populate: { role: true, client_info: true, user_info: true },
+          }
+        );
       }
-    );
 
     // Fetch the address that is being updated
     const clientToUpdate = await strapi.entityService.findOne(

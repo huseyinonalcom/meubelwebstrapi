@@ -6,13 +6,16 @@ module.exports = createCoreController("api::address.address", ({ strapi }) => ({
   async find(ctx) {
     const { filters } = ctx.query;
 
-    const userWithRole = await strapi.entityService.findOne(
-      "plugin::users-permissions.user",
-      ctx.state.user.id,
-      {
-        populate: { role: true, client_info: true, user_info: true },
+    var userWithRole;
+      if (ctx.state.auth.strategy.name == "users-permissions") {
+        userWithRole = await strapi.entityService.findOne(
+          "plugin::users-permissions.user",
+          ctx.state.user.id,
+          {
+            populate: { role: true, client_info: true, user_info: true },
+          }
+        );
       }
-    );
 
     if (
       userWithRole &&
@@ -39,13 +42,16 @@ module.exports = createCoreController("api::address.address", ({ strapi }) => ({
     return { data, meta };
   },
   async findOne(ctx) {
-    const userWithRole = await strapi.entityService.findOne(
-      "plugin::users-permissions.user",
-      ctx.state.user.id,
-      {
-        populate: { role: true, client_info: true, user_info: true },
-      }
-    );
+    var userWithRole;
+    if (ctx.state.auth.strategy.name == "users-permissions") {
+      userWithRole = await strapi.entityService.findOne(
+        "plugin::users-permissions.user",
+        ctx.state.user.id,
+        {
+          populate: { role: true, client_info: true, user_info: true },
+        }
+      );
+    }
 
     const { data, meta } = await super.findOne(ctx);
 
@@ -66,13 +72,16 @@ module.exports = createCoreController("api::address.address", ({ strapi }) => ({
     return { data, meta };
   },
   async update(ctx) {
-    const userWithRole = await strapi.entityService.findOne(
-      "plugin::users-permissions.user",
-      ctx.state.user.id,
-      {
-        populate: { role: true, client_info: true, user_info: true },
+    var userWithRole;
+      if (ctx.state.auth.strategy.name == "users-permissions") {
+        userWithRole = await strapi.entityService.findOne(
+          "plugin::users-permissions.user",
+          ctx.state.user.id,
+          {
+            populate: { role: true, client_info: true, user_info: true },
+          }
+        );
       }
-    );
 
     const addressToUpdate = await strapi.entityService.findOne(
       "api::address.address",
@@ -80,7 +89,6 @@ module.exports = createCoreController("api::address.address", ({ strapi }) => ({
       { populate: { client: true } }
     );
 
-    console.log(addressToUpdate);
 
     if (
       userWithRole &&

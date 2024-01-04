@@ -9,13 +9,16 @@ const { createCoreController } = require("@strapi/strapi").factories;
 module.exports = createCoreController("api::payment.payment", ({ strapi }) => ({
   async find(ctx) {
     const { filters } = ctx.query;
-    const userWithRole = await strapi.entityService.findOne(
-      "plugin::users-permissions.user",
-      ctx.state.user.id,
-      {
-        populate: { role: true, client_info: true, user_info: true },
-      }
-    );
+    var userWithRole;
+    if (ctx.state.auth.strategy.name == "users-permissions") {
+      userWithRole = await strapi.entityService.findOne(
+        "plugin::users-permissions.user",
+        ctx.state.user.id,
+        {
+          populate: { role: true, client_info: true, user_info: true },
+        }
+      );
+    }
 
     if (
       userWithRole &&
@@ -53,13 +56,16 @@ module.exports = createCoreController("api::payment.payment", ({ strapi }) => ({
     return { data, meta };
   },
   async findOne(ctx) {
-    const userWithRole = await strapi.entityService.findOne(
-      "plugin::users-permissions.user",
-      ctx.state.user.id,
-      {
-        populate: { role: true, client_info: true, user_info: true },
+    var userWithRole;
+      if (ctx.state.auth.strategy.name == "users-permissions") {
+        userWithRole = await strapi.entityService.findOne(
+          "plugin::users-permissions.user",
+          ctx.state.user.id,
+          {
+            populate: { role: true, client_info: true, user_info: true },
+          }
+        );
       }
-    );
 
     const { data, meta } = await super.findOne(ctx);
 
@@ -77,7 +83,6 @@ module.exports = createCoreController("api::payment.payment", ({ strapi }) => ({
           populate: false,
         });
       const documentIDs = documents.map((doc) => doc.id);
-      console.log(documentIDs);
       const hasClientDocument = documentIDs.includes(
         data.attributes.document.data.id
       );
