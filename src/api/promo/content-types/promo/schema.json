@@ -66,6 +66,12 @@
     },
     "maxUsesPerClient": {
       "type": "integer"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "promos"
     }
   }
 }

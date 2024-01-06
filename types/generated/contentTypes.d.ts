@@ -889,6 +889,11 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'api::product.product'
     >;
     image: Attribute.Media;
+    promos: Attribute.Relation<
+      'api::category.category',
+      'manyToMany',
+      'api::promo.promo'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1501,6 +1506,11 @@ export interface ApiPromoPromo extends Schema.CollectionType {
     perAmount: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<1>;
     maxUsesTotal: Attribute.Integer;
     maxUsesPerClient: Attribute.Integer;
+    categories: Attribute.Relation<
+      'api::promo.promo',
+      'manyToMany',
+      'api::category.category'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
