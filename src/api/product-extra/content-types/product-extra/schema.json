@@ -16,10 +16,12 @@
       "type": "string"
     },
     "weight": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "per_box": {
-      "type": "integer"
+      "type": "integer",
+      "default": 1
     },
     "product": {
       "type": "relation",
@@ -28,19 +30,38 @@
       "inversedBy": "product_extra"
     },
     "packaged_weight": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "packaged_dimensions": {
       "type": "string"
     },
     "seat_height": {
-      "type": "integer"
+      "type": "integer",
+      "default": 0
     },
     "diameter": {
-      "type": "decimal"
+      "type": "decimal",
+      "default": 0
     },
     "surface_area": {
       "type": "string"
+    },
+    "packaged_weight_net": {
+      "type": "decimal",
+      "default": 0
+    },
+    "tags": {
+      "type": "text"
+    },
+    "armrest_height": {
+      "type": "integer",
+      "required": false,
+      "default": 0
+    },
+    "new": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

@@ -894,6 +894,7 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'manyToMany',
       'api::promo.promo'
     >;
+    priority: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<0>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1358,7 +1359,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
     name: Attribute.String & Attribute.Required;
     description: Attribute.Text;
     productLine: Attribute.String;
-    supplierCode: Attribute.String & Attribute.Required;
+    supplierCode: Attribute.String & Attribute.Required & Attribute.Unique;
     value: Attribute.Decimal & Attribute.Required & Attribute.DefaultTo<0>;
     tax: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<0>;
     width: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<0>;
@@ -1401,7 +1402,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'manyToOne',
       'api::category.category'
     >;
-    priceBeforeDiscount: Attribute.Decimal;
+    priceBeforeDiscount: Attribute.Decimal & Attribute.DefaultTo<0>;
     internalCode: Attribute.String & Attribute.Required;
     product_extra: Attribute.Relation<
       'api::product.product',
@@ -1412,6 +1413,11 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'api::product.product',
       'manyToMany',
       'api::promo.promo'
+    >;
+    product_collection: Attribute.Relation<
+      'api::product.product',
+      'manyToOne',
+      'api::product-collection.product-collection'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1424,6 +1430,48 @@ export interface ApiProductProduct extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::product.product',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProductCollectionProductCollection
+  extends Schema.CollectionType {
+  collectionName: 'product_collections';
+  info: {
+    singularName: 'product-collection';
+    pluralName: 'product-collections';
+    displayName: 'ProductCollection';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    products: Attribute.Relation<
+      'api::product-collection.product-collection',
+      'oneToMany',
+      'api::product.product'
+    >;
+    name: Attribute.String & Attribute.Required;
+    category: Attribute.String;
+    description: Attribute.Text;
+    images: Attribute.Media;
+    featured: Attribute.Boolean & Attribute.DefaultTo<false>;
+    tags: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::product-collection.product-collection',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::product-collection.product-collection',
       'oneToOne',
       'admin::user'
     > &
@@ -1444,18 +1492,22 @@ export interface ApiProductExtraProductExtra extends Schema.CollectionType {
   };
   attributes: {
     barcode: Attribute.String;
-    weight: Attribute.Decimal;
-    per_box: Attribute.Integer;
+    weight: Attribute.Decimal & Attribute.DefaultTo<0>;
+    per_box: Attribute.Integer & Attribute.DefaultTo<1>;
     product: Attribute.Relation<
       'api::product-extra.product-extra',
       'oneToOne',
       'api::product.product'
     >;
-    packaged_weight: Attribute.Decimal;
+    packaged_weight: Attribute.Decimal & Attribute.DefaultTo<0>;
     packaged_dimensions: Attribute.String;
-    seat_height: Attribute.Integer;
-    diameter: Attribute.Decimal;
+    seat_height: Attribute.Integer & Attribute.DefaultTo<0>;
+    diameter: Attribute.Decimal & Attribute.DefaultTo<0>;
     surface_area: Attribute.String;
+    packaged_weight_net: Attribute.Decimal & Attribute.DefaultTo<0>;
+    tags: Attribute.Text;
+    armrest_height: Attribute.Integer & Attribute.DefaultTo<0>;
+    new: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1999,6 +2051,38 @@ export interface ApiUserInfoUserInfo extends Schema.CollectionType {
   };
 }
 
+export interface ApiWebsiteWebsite extends Schema.CollectionType {
+  collectionName: 'websites';
+  info: {
+    singularName: 'website';
+    pluralName: 'websites';
+    displayName: 'Website';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    indexSliderImages: Attribute.Media;
+    indexSliderImagesUrls: Attribute.JSON;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::website.website',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::website.website',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -2026,6 +2110,7 @@ declare module '@strapi/types' {
       'api::establishment.establishment': ApiEstablishmentEstablishment;
       'api::payment.payment': ApiPaymentPayment;
       'api::product.product': ApiProductProduct;
+      'api::product-collection.product-collection': ApiProductCollectionProductCollection;
       'api::product-extra.product-extra': ApiProductExtraProductExtra;
       'api::promo.promo': ApiPromoPromo;
       'api::shelf.shelf': ApiShelfShelf;
@@ -2036,6 +2121,7 @@ declare module '@strapi/types' {
       'api::support-ticket-message.support-ticket-message': ApiSupportTicketMessageSupportTicketMessage;
       'api::task.task': ApiTaskTask;
       'api::user-info.user-info': ApiUserInfoUserInfo;
+      'api::website.website': ApiWebsiteWebsite;
     }
   }
 }

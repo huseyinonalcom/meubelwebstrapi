@@ -50,6 +50,11 @@
       "relation": "manyToMany",
       "target": "api::promo.promo",
       "inversedBy": "categories"
+    },
+    "priority": {
+      "type": "integer",
+      "required": true,
+      "default": 0
     }
   }
 }

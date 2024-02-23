@@ -24,7 +24,8 @@
     },
     "supplierCode": {
       "type": "string",
-      "required": true
+      "required": true,
+      "unique": true
     },
     "value": {
       "type": "decimal",
@@ -124,7 +125,9 @@
       "inversedBy": "products"
     },
     "priceBeforeDiscount": {
-      "type": "decimal"
+      "type": "decimal",
+      "required": false,
+      "default": 0
     },
     "internalCode": {
       "type": "string",
@@ -142,6 +145,12 @@
       "relation": "manyToMany",
       "target": "api::promo.promo",
       "mappedBy": "products"
+    },
+    "product_collection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product-collection.product-collection",
+      "inversedBy": "products"
     }
   }
 }
