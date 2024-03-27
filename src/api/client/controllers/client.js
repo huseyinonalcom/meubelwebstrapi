@@ -84,7 +84,7 @@ module.exports = createCoreController("api::client.client", ({ strapi }) => ({
         );
       }
 
-    // Fetch the address that is being updated
+    // Fetch the client that is being updated
     const clientToUpdate = await strapi.entityService.findOne(
       "api::client.client",
       ctx.params.id
