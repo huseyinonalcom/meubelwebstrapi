@@ -14,9 +14,9 @@
   "attributes": {
     "products": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::product.product",
-      "mappedBy": "product_collection"
+      "mappedBy": "product_collections"
     },
     "name": {
       "type": "string",
@@ -28,9 +28,9 @@
     "description": {
       "type": "text"
     },
-    "images": {
+    "image": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": false,
       "allowedTypes": [
         "images",
@@ -45,6 +45,16 @@
     },
     "tags": {
       "type": "text"
+    },
+    "bgColor": {
+      "type": "string"
+    },
+    "right": {
+      "type": "boolean",
+      "default": false
+    },
+    "textColor": {
+      "type": "string"
     }
   }
 }

@@ -38,12 +38,12 @@
       "default": 0
     },
     "width": {
-      "type": "integer",
+      "type": "decimal",
       "required": true,
       "default": 0
     },
     "depth": {
-      "type": "integer",
+      "type": "decimal",
       "required": true,
       "default": 0
     },
@@ -58,7 +58,7 @@
       "required": true
     },
     "height": {
-      "type": "integer",
+      "type": "decimal",
       "required": true,
       "default": 0
     },
@@ -146,11 +146,16 @@
       "target": "api::promo.promo",
       "mappedBy": "products"
     },
-    "product_collection": {
+    "product_collections": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::product-collection.product-collection",
       "inversedBy": "products"
+    },
+    "reservations": {
+      "type": "component",
+      "repeatable": true,
+      "component": "reservations.reservations"
     }
   }
 }

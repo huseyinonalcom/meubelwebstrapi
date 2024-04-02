@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_reservations_reservations",
+  "info": {
+    "displayName": "reservations",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "client_name": {
+      "type": "string",
+      "required": false
+    },
+    "amount": {
+      "type": "integer",
+      "default": 1
+    },
+    "is_deleted": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
