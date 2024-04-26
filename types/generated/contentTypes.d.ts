@@ -403,9 +403,12 @@ export interface PluginUploadFile extends Schema.CollectionType {
     folderPath: Attribute.String &
       Attribute.Required &
       Attribute.Private &
-      Attribute.SetMinMax<{
-        min: 1;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -441,9 +444,12 @@ export interface PluginUploadFolder extends Schema.CollectionType {
   attributes: {
     name: Attribute.String &
       Attribute.Required &
-      Attribute.SetMinMax<{
-        min: 1;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
     pathId: Attribute.Integer & Attribute.Required & Attribute.Unique;
     parent: Attribute.Relation<
       'plugin::upload.folder',
@@ -462,9 +468,12 @@ export interface PluginUploadFolder extends Schema.CollectionType {
     >;
     path: Attribute.String &
       Attribute.Required &
-      Attribute.SetMinMax<{
-        min: 1;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -503,6 +512,12 @@ export interface PluginContentReleasesRelease extends Schema.CollectionType {
   attributes: {
     name: Attribute.String & Attribute.Required;
     releasedAt: Attribute.DateTime;
+    scheduledAt: Attribute.DateTime;
+    timezone: Attribute.String;
+    status: Attribute.Enumeration<
+      ['ready', 'blocked', 'failed', 'done', 'empty']
+    > &
+      Attribute.Required;
     actions: Attribute.Relation<
       'plugin::content-releases.release',
       'oneToMany',
@@ -551,11 +566,13 @@ export interface PluginContentReleasesReleaseAction
       'morphToOne'
     >;
     contentType: Attribute.String & Attribute.Required;
+    locale: Attribute.String;
     release: Attribute.Relation<
       'plugin::content-releases.release-action',
       'manyToOne',
       'plugin::content-releases.release'
     >;
+    isEntryValid: Attribute.Boolean;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
@@ -755,10 +772,13 @@ export interface PluginI18NLocale extends Schema.CollectionType {
   };
   attributes: {
     name: Attribute.String &
-      Attribute.SetMinMax<{
-        min: 1;
-        max: 50;
-      }>;
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 50;
+        },
+        number
+      >;
     code: Attribute.String & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1362,13 +1382,13 @@ export interface ApiProductProduct extends Schema.CollectionType {
     supplierCode: Attribute.String & Attribute.Required & Attribute.Unique;
     value: Attribute.Decimal & Attribute.Required & Attribute.DefaultTo<0>;
     tax: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<0>;
-    width: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<0>;
-    depth: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<0>;
+    width: Attribute.Decimal & Attribute.Required & Attribute.DefaultTo<0>;
+    depth: Attribute.Decimal & Attribute.Required & Attribute.DefaultTo<0>;
     minStock: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<0>;
     minOrderAmount: Attribute.Integer &
       Attribute.Required &
       Attribute.DefaultTo<0>;
-    height: Attribute.Integer & Attribute.Required & Attribute.DefaultTo<0>;
+    height: Attribute.Decimal & Attribute.Required & Attribute.DefaultTo<0>;
     color: Attribute.String;
     material: Attribute.String;
     images: Attribute.Media;
@@ -1414,11 +1434,12 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'manyToMany',
       'api::promo.promo'
     >;
-    product_collection: Attribute.Relation<
+    product_collections: Attribute.Relation<
       'api::product.product',
-      'manyToOne',
+      'manyToMany',
       'api::product-collection.product-collection'
     >;
+    reservations: Attribute.Component<'reservations.reservations', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1452,15 +1473,18 @@ export interface ApiProductCollectionProductCollection
   attributes: {
     products: Attribute.Relation<
       'api::product-collection.product-collection',
-      'oneToMany',
+      'manyToMany',
       'api::product.product'
     >;
     name: Attribute.String & Attribute.Required;
     category: Attribute.String;
     description: Attribute.Text;
-    images: Attribute.Media;
+    image: Attribute.Media;
     featured: Attribute.Boolean & Attribute.DefaultTo<false>;
     tags: Attribute.Text;
+    bgColor: Attribute.String;
+    right: Attribute.Boolean & Attribute.DefaultTo<false>;
+    textColor: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1501,12 +1525,11 @@ export interface ApiProductExtraProductExtra extends Schema.CollectionType {
     >;
     packaged_weight: Attribute.Decimal & Attribute.DefaultTo<0>;
     packaged_dimensions: Attribute.String;
-    seat_height: Attribute.Integer & Attribute.DefaultTo<0>;
+    seat_height: Attribute.Decimal & Attribute.DefaultTo<0>;
     diameter: Attribute.Decimal & Attribute.DefaultTo<0>;
-    surface_area: Attribute.String;
     packaged_weight_net: Attribute.Decimal & Attribute.DefaultTo<0>;
     tags: Attribute.Text;
-    armrest_height: Attribute.Integer & Attribute.DefaultTo<0>;
+    armrest_height: Attribute.Decimal & Attribute.DefaultTo<0>;
     new: Attribute.Boolean & Attribute.DefaultTo<false>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
