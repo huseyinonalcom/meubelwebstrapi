@@ -80,6 +80,10 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "client_info"
+    },
+    "preferred_language": {
+      "type": "string",
+      "default": "fr"
     }
   }
 }

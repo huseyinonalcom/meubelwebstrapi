@@ -986,6 +986,7 @@ export interface ApiClientClient extends Schema.CollectionType {
       'oneToOne',
       'plugin::users-permissions.user'
     >;
+    preferred_language: Attribute.String & Attribute.DefaultTo<'fr'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
