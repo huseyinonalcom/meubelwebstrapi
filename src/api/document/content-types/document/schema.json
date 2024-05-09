@@ -130,6 +130,12 @@
       "relation": "manyToOne",
       "target": "api::user-info.user-info",
       "inversedBy": "documents"
+    },
+    "supplier": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::supplier.supplier",
+      "inversedBy": "document"
     }
   }
 }

@@ -1160,6 +1160,11 @@ export interface ApiDocumentDocument extends Schema.CollectionType {
       'manyToOne',
       'api::user-info.user-info'
     >;
+    supplier: Attribute.Relation<
+      'api::document.document',
+      'oneToOne',
+      'api::supplier.supplier'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1688,6 +1693,11 @@ export interface ApiSupplierSupplier extends Schema.CollectionType {
       'api::supplier.supplier',
       'oneToMany',
       'api::address.address'
+    >;
+    document: Attribute.Relation<
+      'api::supplier.supplier',
+      'oneToOne',
+      'api::document.document'
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
