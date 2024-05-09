@@ -1699,6 +1699,7 @@ export interface ApiSupplierSupplier extends Schema.CollectionType {
       'oneToOne',
       'api::document.document'
     >;
+    category: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
