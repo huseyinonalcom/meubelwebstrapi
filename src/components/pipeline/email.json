@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_pipeline_emails",
+  "info": {
+    "displayName": "email",
+    "icon": "envelop",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "subject": {
+      "type": "text",
+      "required": true
+    },
+    "body": {
+      "type": "text",
+      "required": true
+    },
+    "receivers_client": {
+      "type": "boolean",
+      "required": true
+    },
+    "receivers_creator": {
+      "type": "boolean",
+      "required": true
+    },
+    "receivers_userids": {
+      "type": "json"
+    },
+    "sent": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

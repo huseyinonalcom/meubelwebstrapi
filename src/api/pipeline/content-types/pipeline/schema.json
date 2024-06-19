@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pipelines",
+  "info": {
+    "singularName": "pipeline",
+    "pluralName": "pipelines",
+    "displayName": "pipeline",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "suppliers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::supplier.supplier",
+      "mappedBy": "pipeline"
+    },
+    "segments": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pipeline.pipeline-segment"
+    },
+    "document": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::document.document",
+      "inversedBy": "pipeline"
+    },
+    "phase": {
+      "type": "integer",
+      "min": 0,
+      "required": true
+    }
+  }
+}

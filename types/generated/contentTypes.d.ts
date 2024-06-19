@@ -1165,6 +1165,11 @@ export interface ApiDocumentDocument extends Schema.CollectionType {
       'oneToOne',
       'api::supplier.supplier'
     >;
+    pipeline: Attribute.Relation<
+      'api::document.document',
+      'oneToOne',
+      'api::pipeline.pipeline'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1363,6 +1368,56 @@ export interface ApiPaymentPayment extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::payment.payment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPipelinePipeline extends Schema.CollectionType {
+  collectionName: 'pipelines';
+  info: {
+    singularName: 'pipeline';
+    pluralName: 'pipelines';
+    displayName: 'pipeline';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    suppliers: Attribute.Relation<
+      'api::pipeline.pipeline',
+      'oneToMany',
+      'api::supplier.supplier'
+    >;
+    segments: Attribute.Component<'pipeline.pipeline-segment', true>;
+    document: Attribute.Relation<
+      'api::pipeline.pipeline',
+      'oneToOne',
+      'api::document.document'
+    >;
+    phase: Attribute.Integer &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::pipeline.pipeline',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::pipeline.pipeline',
       'oneToOne',
       'admin::user'
     > &
@@ -1700,6 +1755,11 @@ export interface ApiSupplierSupplier extends Schema.CollectionType {
       'api::document.document'
     >;
     category: Attribute.String;
+    pipeline: Attribute.Relation<
+      'api::supplier.supplier',
+      'manyToOne',
+      'api::pipeline.pipeline'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2144,6 +2204,7 @@ declare module '@strapi/types' {
       'api::document-product.document-product': ApiDocumentProductDocumentProduct;
       'api::establishment.establishment': ApiEstablishmentEstablishment;
       'api::payment.payment': ApiPaymentPayment;
+      'api::pipeline.pipeline': ApiPipelinePipeline;
       'api::product.product': ApiProductProduct;
       'api::product-collection.product-collection': ApiProductCollectionProductCollection;
       'api::product-extra.product-extra': ApiProductExtraProductExtra;

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_pipeline_pipeline_segments",
+  "info": {
+    "displayName": "pipeline_segment",
+    "icon": "arrowRight",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "default": 0,
+      "min": 0
+    },
+    "emails": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pipeline.email"
+    },
+    "tasks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "pipeline.task"
+    }
+  }
+}

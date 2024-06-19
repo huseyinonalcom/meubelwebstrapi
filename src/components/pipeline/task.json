@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_pipeline_tasks",
+  "info": {
+    "displayName": "task",
+    "icon": "check",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "first_deadline": {
+      "type": "integer",
+      "required": true,
+      "min": 0
+    },
+    "condition": {
+      "type": "enumeration",
+      "enum": [
+        "paid_partial",
+        "paid_full",
+        "deliveries_planned",
+        "deliveries_fulfilled"
+      ]
+    },
+    "task": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::task.task"
+    }
+  }
+}
